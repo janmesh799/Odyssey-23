@@ -1,0 +1,119 @@
+
+.cards {
+    display: flex;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+@media (min-width: 850px) {
+    .cards {
+        width: 33.3%;
+    }
+}
+
+.cards .card-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 0px;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+
+.cards .card-info {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 1rem;
+    line-height: 1.5em;
+}
+
+.cards .card-title {
+    font-size: 25px;
+    line-height: 1.1em;
+    color: #32325d;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    letter-spacing: 1.65px;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.cards .card-image {
+    height: 200px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0px 0px 0px 0px;
+    opacity: 0.8;
+}
+
+.cards .card-more {
+    display: inline-block;
+    text-align: center;
+    border: 2px solid #000;
+    padding: 7px;
+    margin: 20px 5px 5px;
+    background: #fff;
+    color: #000;
+    font-weight: 700;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    margin-top: auto;
+}
+
+.cards .card-more:hover {
+    background-color: #000;
+    border-color: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card-image img {
+    width: 100%;
+    width: -moz-available;
+    transition: all 1s cubic-bezier(.29, .64, .45, .94);
+    -webkit-transition: all 1s cubic-bezier(.29, .64, .45, .94);
+    -o-transition: all 1s cubic-bezier(.29, .64, .45, .94);
+    -moz-transition: all 1s cubic-bezier(.29, .64, .45, .94);
+}
+
+.cards .card-item:hover>.card-image img,
+.cards .card-item:active>.card-image img {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    overflow: hidden;
+}
+
+.cards .card-item:hover>.card-image,
+.cards .card-item:active>.card-image {
+    opacity: 1;
+}
+
+.box,
+.cards .card-item {
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+.cards .card-item:hover {
+    box-shadow: 0 20px 50px -8px rgba(0, 0, 0, 1);
+}
+
+.cards .card-intro {
+    text-align: left;
+    margin: 0 1rem 1rem 1rem;
+    font-family: 'Lato', sans-serif
+}
