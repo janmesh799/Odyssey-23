@@ -1,7 +1,7 @@
 import React from "react";
 import cover from "../../images/cover.jpg";
 import iconImage from "../../images/iconImage.png";
-import './Home.css'
+import "./Home.css";
 const Home = () => {
   return (
     <div
@@ -47,6 +47,7 @@ const Home = () => {
               letterSpacing: "0.05em",
               lineHeight: ".9em",
               margin: "1rem",
+              fontFamily: "'Lato',sans-sarif",
             }}
           >
             Odyssey
@@ -60,6 +61,7 @@ const Home = () => {
               textAlign: "left",
               margin: " 2px",
               marginLeft: "1rem",
+              fontFamily: "'Lato',sans-sarif",
             }}
           >
             {" "}
@@ -94,10 +96,7 @@ const Home = () => {
             textAlign: "center",
           }}
         >
-          <div
-          className="down-arrow"
-           
-          ></div>
+          <div className="down-arrow"></div>
         </span>
       </div>
     </div>

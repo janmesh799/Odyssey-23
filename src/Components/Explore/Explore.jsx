@@ -39,12 +39,11 @@ const Explore = () => {
   ];
   return (
     <div>
-      <Container sx={{marginTop:"5rem"}} maxWidth="false">
-        <Container maxWidth="false" sx={{ margin: "2rem" }}>
-          <Typography sx={{ textAlign: "center" }} variant="h4">
+      <Container sx={{ marginTop: "5rem" }} maxWidth="false">
+        <Container maxWidth="false" sx={{ margin: "2rem",display:"flex",justifyContent:"center" }}>
+          <Typography className="heading" variant="h4">
             Explore
           </Typography>
-          <hr />
         </Container>
         <div style={{ display: "flex", flexDirection: "row" }}>
           {card_data.map((card) => {

@@ -1,139 +1,70 @@
-import React from "react";
-import { Container } from "@mui/system";
-import {
-  Button,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-} from "@mui/material";
+import React, { useState } from "react";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import iconImage from "../../images/iconImage.png";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const [event, setevent] = useState("hide-event");
+  const [spons, setspons] = useState("hide-spons");
+  const showEvents = () => {
+    setspons("hide-spons");
+    if (event === "hide-event") {
+      setevent("drop-event");
+    } else {
+      setevent("hide-event");
+    }
+  };
+  const showSpons = () => {
+    setevent("hide-event");
+    if (spons === "hide-spons") {
+      setspons("drop-spons");
+    } else {
+      setspons("hide-spons");
+    }
+  };
   return (
-    <div>
-      <Container
-        maxWidth="false"
-        sx={{
-          margin: "0px",
-          padding: "0px !important",
-          backgroundImage: "linear-gradient(to bottom right, #222222, #555555)",
-          display: "flex",
-          justifyContent: "space-between",
-        }}
-      >
-        <Button>
-          <img style={{ height: "60px" }} src={iconImage} alt="" />
-        </Button>
-        <Container
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            margin: "0px",
-            justifyContent: "flex-end",
-          }}
-        >
-          <Button sx={{ color: "white" }}>
-            <a style={{ color: "white", textDecoration: "none" }} href="/">
-              Home
-            </a>
-          </Button>
-          <Button sx={{ color: "white" }}>
-            {" "}
-            <a style={{ color: "white", textDecoration: "none" }} href="/">
-              OT
-            </a>
-          </Button>
-          <FormControl
-            variant="filled"
-            sx={{ width: "10rem", margin: "0rem 1rem" }}
+    <nav className="topnav" id="myTopnav">
+      <a href="/" className="odylogo" id="nav-odylogo">
+        <img alt="icon" src={iconImage} />
+      </a>
+      <a href="/" className="icon" id="toggle-nav">
+        &#9776;
+      </a>
+      <div className="nav-links">
+        <a href="/">
+          <span className="nav-link">Home</span>
+        </a>
+        <a style={{ fontFamily: "'Lato', sans-serif" }} href="/">
+          <span className="nav-link">OT</span>
+        </a>
+        <div id="events" className="dropdown">
+          <button onClick={showEvents} className="dropbtn">
+            <span className="nav-link">Events</span>
+            <ArrowDropDownIcon />
+          </button>
+          <div id={event} className="dropdown-content ">
+            <a href="404/index.html">Click me</a>
+            <a href="404/index.html">Click me</a>
+            <a href="404/index.html">Click me</a>
+          </div>
+        </div>
+        <div className="dropdown">
+          <button
+            style={{ fontFamily: "'Lato', sans-serif" }}
+            onClick={showSpons}
+            className="dropbtn"
           >
-            <InputLabel id="events">
-              <Button sx={{ color: "white" }}>Events</Button>
-            </InputLabel>
-            <Select labelId="events" id="events_menu" label="events">
-              <MenuItem>
-                <a
-                  style={{ textDecoration: "none", color: "black" }}
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://www.google.com/"
-                >
-                  {" "}
-                  Google
-                </a>
-              </MenuItem>
-              <MenuItem>
-                <a
-                  style={{ textDecoration: "none", color: "black" }}
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://www.google.com/"
-                >
-                  {" "}
-                  Google
-                </a>
-              </MenuItem>
-              <MenuItem>
-                <a
-                  style={{ textDecoration: "none", color: "black" }}
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://www.google.com/"
-                >
-                  {" "}
-                  Google
-                </a>
-              </MenuItem>
-            </Select>
-          </FormControl>
-          <FormControl
-            variant="filled"
-            sx={{ width: "10rem", margin: "0rem 1rem" }}
-          >
-            <InputLabel id="Sponsors">
-              <Button sx={{ color: "white" }}>Sponsors</Button>
-            </InputLabel>
-            <Select labelId="Sponsors" id="Sponsors_menu" label="Sponsors">
-              <MenuItem>
-                <a
-                  style={{ textDecoration: "none", color: "black" }}
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://www.google.com/"
-                >
-                  {" "}
-                  Google
-                </a>
-              </MenuItem>
-              <MenuItem>
-                <a
-                  style={{ textDecoration: "none", color: "black" }}
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://www.google.com/"
-                >
-                  {" "}
-                  Google
-                </a>
-              </MenuItem>
-              <MenuItem>
-                <a
-                  style={{ textDecoration: "none", color: "black" }}
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://www.google.com/"
-                >
-                  {" "}
-                  Google
-                </a>
-              </MenuItem>
-            </Select>
-          </FormControl>
-        </Container>
-      </Container>
-    </div>
+            <span className="nav-link">Sponsors</span>
+            <ArrowDropDownIcon />
+          </button>
+          <div id={spons} className="dropdown-content ">
+            <a href="404/index.html">Click me</a>
+            <a href="404/index.html">Click me</a>
+            <a href="404/index.html">Click me</a>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 };
 

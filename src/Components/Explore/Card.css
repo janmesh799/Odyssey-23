@@ -52,15 +52,22 @@
     border-radius: 0px 0px 0px 0px;
     opacity: 0.8;
 }
-
+.card-more{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
 .cards .card-more {
-    display: inline-block;
+    /* display: inline-block; */
     text-align: center;
     border: 2px solid #000;
     padding: 7px;
     margin: 20px 5px 5px;
     background: #fff;
     color: #000;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
     font-weight: 700;
     letter-spacing: 1.25px;
     text-transform: uppercase;

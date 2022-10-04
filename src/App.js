@@ -6,7 +6,7 @@ import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
-    <div className="App">
+    <div style={{ color: "#333", backgroundColor: "#f2f2f5",overflow:"hidden",fontFamily: "'Lato', sans-serif" }} className="App">
       <div
         style={{
           overflow: "hidden",
@@ -17,7 +17,7 @@ function App() {
       >
         <Navbar />
       </div>
-      <div style={{ paddingTop: "4em" }}>
+      <div style={{ paddingTop: "3em", }}>
         <Home />
         <About />
         <Explore />
